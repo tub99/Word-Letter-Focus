@@ -29,7 +29,7 @@ export class Activity extends React.Component {
         currentPageIdx: number,
         enableNextQuestion: Function
     };
-    question: string = 'Highlight the proper nouns';
+    question: string = 'Highlight the proper nouns and underline the common nouns in each sentence';
     activityDone: boolean = false;
 
     constructor(props: any) {
