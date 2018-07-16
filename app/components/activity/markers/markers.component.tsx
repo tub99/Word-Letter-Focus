@@ -71,7 +71,7 @@ export class Markers extends React.Component {
                     </div>
                     <div className="divide" >
                         <img  {...tabAttr} className={this.state.selectedOption === 'letter-divide' ? 'img-divide active' : 'img-divide'} src="../../../assets/saw.png" alt="Letter Divide" data-value="letter-divide"  onKeyPress={this.handleKeyPress} onClick={this.handleOptionChange} /><br />
-                        <span className="img-divide-lbl" aria-hidden="true">Letter Divide</span>
+                        <span className="img-divide-lbl" aria-hidden="true">Divide</span>
                     </div>
                     <div className="eraser">
                         <img  {...tabAttr} className={this.state.selectedOption === 'eraser' ? 'img-eraser active' : 'img-eraser'} src="../../../assets/eraser.png" alt="Eraser" data-value="eraser"  onKeyPress={this.handleKeyPress} onClick={this.handleOptionChange} /><br />
