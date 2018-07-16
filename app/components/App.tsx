@@ -45,10 +45,6 @@ export class App extends React.Component {
             <div className="master-container">
                 <div className="title-container">
                     <h2 className="title">{this.title}</h2>
-                    <div className="buttons-container">
-                        <button className="help">Help</button>
-                        <button className="close">Close</button>
-                    </div>
                 </div>
                 <Activity currentPageIdx={this.state.currentPageIdx} questionSets={this.questionSets} enableNextQuestion={this.enableNextQuestion} />
                 <Navigation setNavIdx={this.setNavIdx} currentPageIdx={this.state.currentPageIdx} lastIdx={this.state.lastIdx} />

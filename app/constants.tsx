@@ -35,18 +35,19 @@ export default class Constants {
         },
         {
             sentences: [
-                'w q qwd ,mas dmas dam sd.,masd',
-                ' nfwenlkmwelmd klkdm qlmkwdlqmkw dlq ',
-                ' wmnf em lmqwdq;lw kdm;lqmkwd l'
+                'The hen has eggs in that nest.',
+                'My dog Tess three pups',
+                'Cass can hem her pants',
+                'Brag and Med wed the next day'
             ],
             correctMarkers: [
                 {
                     'type': 'word-highlight',
-                    'idx': [[1, 3], [2, 3], [4]]
+                    'idx': [[], [3], [0],[0,2]]
                 },
                 {
                     'type': 'word-underline',
-                    'idx': [[3], [0, 3], [2]]
+                    'idx': [[1,3,6], [1, 4], [4],[6]]
                 },
                 {
                     'type': 'letter-highlight',
@@ -67,9 +68,134 @@ export default class Constants {
         },
         {
             sentences: [
-                'qlw d;ql mdkqw;qwm;lqmc ;kq ;lqwkmkqn c;wm ;lqmc ;lqmc ;kqjn ',
-                ',qmw dmebjwbvljww nxoi ij cpiwh eujq iwd;qlwdqwnd',
-                '.ldkqwndk qdmoqiw foqwd oqwnfiwjrgo rtk oeirg eibflir oiwe fwoe f'
+                 'Dad is grilling at the picnic.',
+                'The duck had fuzz on its head',
+                'Mom likes to eat fresh fish',
+                'Could Brent move to Billings?'
+            ],
+            correctMarkers: [
+                {
+                    'type': 'word-highlight',
+                    'idx': [[0], [], [0],[1,4]]
+                },
+                {
+                    'type': 'word-underline',
+                    'idx': [[5], [1, 3,6], [5],[]]
+                },
+                {
+                    'type': 'letter-highlight',
+                    'idx': [[{
+                        wordIdx: 0,
+                        charIdx: 2
+                    },
+                    {
+                        wordIdx: 2,
+                        charIdx: 1
+                    }]]
+                },
+                {
+                    'type': 'letter-divide',
+                    'idx': [[]]
+                }
+            ]
+        },
+        {
+            sentences: [
+                 'Dad is grilling at the picnic.',
+                'The duck had fuzz on its head',
+                'Mom likes to eat fresh fish',
+                'Could Brent move to Billings?'
+            ],
+            correctMarkers: [
+                {
+                    'type': 'word-highlight',
+                    'idx': [[0], [], [0],[1,4]]
+                },
+                {
+                    'type': 'word-underline',
+                    'idx': [[5], [1, 3,6], [5],[]]
+                },
+                {
+                    'type': 'letter-highlight',
+                    'idx': [[{
+                        wordIdx: 0,
+                        charIdx: 2
+                    },
+                    {
+                        wordIdx: 2,
+                        charIdx: 1
+                    }]]
+                },
+                {
+                    'type': 'letter-divide',
+                    'idx': [[]]
+                }
+            ]
+        },
+        {
+            sentences: [
+                 'Dad is grilling at the picnic.',
+                'The duck had fuzz on its head',
+                'Mom likes to eat fresh fish',
+                'Could Brent move to Billings?'
+            ],
+            correctMarkers: [
+                {
+                    'type': 'word-highlight',
+                    'idx': [[0], [], [0],[1,4]]
+                },
+                {
+                    'type': 'word-underline',
+                    'idx': [[5], [1, 3,6], [5],[]]
+                },
+                {
+                    'type': 'letter-highlight',
+                    'idx': [[{
+                        wordIdx: 0,
+                        charIdx: 2
+                    },
+                    {
+                        wordIdx: 2,
+                        charIdx: 1
+                    }]]
+                },
+                {
+                    'type': 'letter-divide',
+                    'idx': [[]]
+                }
+            ]
+        },
+        {
+            sentences: [
+                 'Dad is grilling at the picnic.',
+                'The duck had fuzz on its head',
+                'Mom likes to eat fresh fish',
+                'Could Brent move to Billings?'
+            ],
+            correctMarkers: [
+                {
+                    'type': 'word-highlight',
+                    'idx': [[0], [], [0],[1,4]]
+                },
+                {
+                    'type': 'word-underline',
+                    'idx': [[5], [1, 3,6], [5],[]]
+                },
+                {
+                    'type': 'letter-highlight',
+                    'idx': [[{
+                        wordIdx: 0,
+                        charIdx: 2
+                    },
+                    {
+                        wordIdx: 2,
+                        charIdx: 1
+                    }]]
+                },
+                {
+                    'type': 'letter-divide',
+                    'idx': [[]]
+                }
             ]
         }
     ];

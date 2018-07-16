@@ -4,6 +4,7 @@ import './activity.component.less';
 import Constants from '../../constants';
 import { Markers } from './markers/markers.component';
 
+let tabAttr = {tabIndex: 0};
 export class Activity extends React.Component {
 
     state: {
@@ -47,6 +48,7 @@ export class Activity extends React.Component {
         this.setSelectedOption = this.setSelectedOption.bind(this);
         this.markWord = this.markWord.bind(this);
         this.markChar = this.markChar.bind(this);
+        this.handleKeyPress = this.handleKeyPress.bind(this);
         this.validateMarkers = this.validateMarkers.bind(this);
         this.clearMarkers = this.clearMarkers.bind(this);
     }
@@ -127,7 +129,7 @@ export class Activity extends React.Component {
         });
     }
 
-    markChar(event: React.MouseEvent<HTMLSpanElement>) {
+    markChar(event: any) {
         event.stopPropagation();
         let markerToSet = '',
             currentDOM = event.target as HTMLSpanElement;
@@ -153,6 +155,13 @@ export class Activity extends React.Component {
             }
         }) : this.markWord(currentDOM.parentElement);
     }
+    handleKeyPress(event: any){
+        console.log('Enter pressed', event);
+        if (event.key === 'Enter') {
+          console.log('Enter pressed');
+          this.markWord(event.target as HTMLSpanElement);
+        }
+      }
 
     eraseMark(currentDOM: HTMLSpanElement, currentElementStates: any[]) {
         this.setState((state: any) => {
@@ -350,7 +359,7 @@ export class Activity extends React.Component {
                                 let letterCount = item.split('').length,
                                     selectedOptionClass = `word${this.state.selectedOption === 'word-highlight' ? ' highlight' : this.state.selectedOption === 'word-underline' ? ' underline' : ''}${this.setMarker(idx1, idx2)}`;
                                 return <React.Fragment key={'moon2' + idx2}>
-                                    <span className={selectedOptionClass} word-index={idx2}>{item.split('').map((item, idx3) => {
+                                    <span {...tabAttr} className={selectedOptionClass}   onKeyPress={this.handleKeyPress} word-index={idx2}>{item.split('').map((item, idx3) => {
                                         let classNames = `${item !== ' ' ? 'character' : ''}${this.state.selectedOption === 'letter-highlight' ? ' highlight' : this.state.selectedOption === 'letter-divide' ? ' divide' : ''}${idx3 === letterCount - 1 ? ' last' : ''}${this.setMarker(idx1, idx2, idx3)}`;
                                         return <span className={classNames} key={'moon' + idx3} onClick={this.markChar} char-index={idx3}>{item}</span>;
                                     })}</span>
