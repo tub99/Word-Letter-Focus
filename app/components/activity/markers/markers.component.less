@@ -1,0 +1,64 @@
+.master-marker-container {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    .markers-container {
+        position: relative;
+        float: left;
+        display: inline;
+        left: 20px;
+        div {
+            &.highlight,
+            &.underline,
+            &.color,
+            &.divide,
+            &.eraser {
+                display: inline;
+                float: left;
+                margin-right: 15px;
+            }
+            span {
+                color: black;
+                font-weight: 500;
+                &.img-divide-lbl {
+                    margin-left: 10px;
+                }
+                &.img-eraser-lbl {
+                    margin-left: 40px;
+                }
+            }
+        }
+        img {
+            &.img-highlight,
+            &.img-underline,
+            &.img-color,
+            &.img-divide,
+            &.img-eraser {
+                width: 170px;
+                height: 130px;
+                margin-left: 25px;
+                cursor: pointer;
+                &:hover,
+                &.active {
+                    box-shadow: 0px 0px 5px 1px white
+                }
+            }
+        }
+    }
+    .validators-container {
+        position: absolute;
+        float: right;
+        display: inline;
+        right: 20px;
+        top:198px;
+        button.reset,
+        button.ok {
+            border-radius: 10px;
+            box-shadow: 0 1px 1px 2px rgb(41, 41, 253);
+            margin-right: 15px;
+            background-color: rgb(27, 198, 218);
+            width:120px;
+            
+        }
+    }
+}
